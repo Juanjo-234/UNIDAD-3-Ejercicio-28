@@ -1,7 +1,11 @@
-Resolución del ejercicio N°28 de la unidad 3 de programación 2.
-Este programa modela un sistema de gestión comercial que calcula los precios finales de venta para diferentes tipos de artículos mediante el uso de herencia, atributos protegidos, polimorfismo y sobrescritura de métodos en Java.
+Este programa está diseñado para modelar un sistema de gestión y tasación de inventarios comerciales aplicando los pilares fundamentales de la programación orientada a objetos en Java: herencia, encapsulamiento, reutilización de atributos mediante la palabra clave super y polimorfismo a través de la sobrescritura de métodos (@Override) para el cálculo de precios finales con regímenes impositivos particulares.
 
-Clases utilizadas
-Producto: Clase base que almacena los datos comunes (codigo, descripcion, costoBase) y define la estructura general.
-ProductoAlimenticio: Clase hija que extiende de Producto, incorpora el porcentaje de impuesto interno o descuento y calcula el precio final específico.
-Electrodomestico: Clase hija que extiende de Producto, incorpora la garantía en meses y el costo adicional por cobertura, sobrescribiendo el cálculo del precio final.
+A continuación se detalla exactamente lo que hace cada parte del programa:
+
+Define la clase base Producto: Concentra los atributos protegidos comunes a cualquier artículo del catálogo (codigo, descripcion y costoBase), junto con un constructor centralizado y un método base para consultar los datos generales.
+
+Desarrollar las clases hijas (ProductoAlimenticio y Electrodomestico): Extienden de Producto incorporando atributos y reglas de negocio propias (como la fecha de vencimiento y el porcentaje de impuesto interno para alimentos; los meses de garantía y el costo de seguro técnico para electrodomésticos).
+
+Implementa el cálculo del precio final: Cada subclase sobrescribe el método correspondiente aplicando su fórmula impositiva y de recargo específica para determinar el precio de venta al público.
+
+Ejecuta la prueba en el main: Crea una lista polimórfica de productos especializados, calcula sus precios finales invocando las reglas particulares, y despliega un reporte consolidado por consola.
